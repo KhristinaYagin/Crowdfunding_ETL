@@ -30,7 +30,7 @@ create table Subcategory (
 
 CREATE TABLE Campaign (
 	cf_id INT PRIMARY KEY,
-	contact_id INT,
+	contact_id INT FK,
 	company_name VARCHAR,
 	description VARCHAR,
 	goal REAL,
@@ -41,8 +41,8 @@ CREATE TABLE Campaign (
 	currency VARCHAR,
 	launch_date DATE,
 	end_date DATE,
-	category_id VARCHAR,
-	subcategory_id VARCHAR
+	category_id VARCHAR FK,
+	subcategory_id VARCHAR FK
 	);
 	
  SELECT * FROM Campaign;
