@@ -1,7 +1,7 @@
 Create a new table
 
 create table Contacts (
-	contact_id INT,
+	contact_id INT PRIMARY KEY,
 	first_name VARCHAR,
     last_name VARCHAR,
     email VARCHAR
@@ -11,7 +11,7 @@ create table Contacts (
  Create a new table
  
 create table Category (
-	category_id varchar,
+	category_id varchar PRIMARY KEY,
 	categories varchar
 );
 
@@ -26,17 +26,15 @@ create table Subcategory (
 );
  
  SELECT * FROM Subcategory;
- 
- Drop table if exists Campaign
- -- CREATE TABLE and view column datatypes
- 
+
+
 CREATE TABLE Campaign (
-	cf_id INT,
+	cf_id INT PRIMARY KEY,
 	contact_id INT,
 	company_name VARCHAR,
 	description VARCHAR,
-	goal INT,
-	pledge INT,
+	goal REAL,
+	pledge REAL,
 	outcome VARCHAR,
 	backers_count INT,
 	country VARCHAR,
